@@ -1,0 +1,43 @@
+<nav class="bg-gray-900 bg-opacity-25" data-navbar [ngClass]="status ? 'active': ''">
+  <div class="mx-auto max-w-7xl px-3">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="text-white font-semibold text-xl">{{ name }}</div>
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-controls="mobile-menu" aria-expanded="false">
+          <!-- Icon für geschlossenes Menü -->
+          <svg *ngIf="!isMobileMenuOpen" class="h-8 w-8 text-slate-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+          </svg>
+
+          <!-- Icon für offenes Menü -->
+          <svg *ngIf="isMobileMenuOpen" class="h-8 w-8 text-slate-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-center">
+        <div>
+          <div class="flex space-x-4">
+            <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+            <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Fähigkeiten</a>
+            <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Bildung</a>
+            <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Erfahrung</a>
+            <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div [class.hidden]="!isMobileMenuOpen" class="sm:hidden" id="mobile-menu">
+    <div class="px-2 pb-3 space-y-1">
+      <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Über mich</a>
+      <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Fähigkeiten</a>
+      <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Bildung</a>
+      <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Erfahrung</a>
+      <a href="" class="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
