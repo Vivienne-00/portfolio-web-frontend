@@ -1,0 +1,15 @@
+.timeline-circle {
+    @apply absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white bg-white;
+}
+
+.timeline-dates{
+    @apply mb-1 text-sm font-normal leading-none text-white;
+}
+
+.experiences-type {
+    @apply text-lg font-semibold text-white;
+}
+
+.experiences-location {
+    @apply text-base font-normal text-gray-400;
+}
